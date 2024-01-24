@@ -1,6 +1,7 @@
 
 <link rel="stylesheet" href="./bolt/elements/root.css" />
 <link rel="stylesheet" href="./bolt/elements/body.css" />
+<link rel="stylesheet" href="./bolt/classes/block.css" />
 <link rel="stylesheet" href="./bolt/classes/text.css" />
 
 <style>
@@ -9,7 +10,7 @@
     font-weight: 400;
     font-style: normal;
     font-stretch: normal;
-    src: url('../fonts/euclid/EuclidSquare-Regular-WebTrial.woff') format('woff');
+    src: url('./fonts/euclid/EuclidSquare-Regular-WebTrial.woff') format('woff');
 }
 
 @font-face{
@@ -17,7 +18,7 @@
     font-weight: 600;
     font-style: normal;
     font-stretch: normal;
-    src: url('../fonts/euclid/EuclidSquare-Semibold-WebTrial.woff') format('woff');
+    src: url('./fonts/euclid/EuclidSquare-Semibold-WebTrial.woff') format('woff');
 }
 
 @font-face{
@@ -25,7 +26,7 @@
     font-weight: 700;
     font-style: normal;
     font-stretch: normal;
-    src: url('../fonts/euclid/EuclidSquare-Bold-WebTrial.woff') format('woff');
+    src: url('./fonts/euclid/EuclidSquare-Bold-WebTrial.woff') format('woff');
 }
 
 body {
@@ -64,6 +65,32 @@ body {
 .text-09           { font-size: 0.875rem;  line-height: 1.5em;   font-weight: 400; text-transform: uppercase; }
 
 body h2 + .text-09 { margin-top: 1.5em; }
+
+body > .article-block {
+    margin: 1.5rem -1.5rem 0;
+    padding: 1.5rem;
+}
+
+.article-block > .img-block {
+    width: calc(100% + 3rem);
+    max-width: calc(100% + 3rem);
+    margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+}
+
+@media (min-width: 50em) {
+    body > .article-block {
+        padding-left: calc(50% + 2.25rem);
+        min-height: 33.3333vw;
+    }
+
+    .article-block > .img-block {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(50% - 0.75rem);
+        margin: 0;
+    }
+}
 </style>
 
 <h1>Tarte aux Myrtilles</h1>
@@ -74,7 +101,7 @@ body h2 + .text-09 { margin-top: 1.5em; }
 
 <p>If rating pistes accurately is difficult due to their environment, then so it is with <b>tartes aux myrtilles</b>, therefore any ratings on this website should be taken with a pinch of salt. Not literally, obviously; the greatest embellishment that should grace a slice of tarte aux myrtilles is a light whipping of <b>Chantilly cream</b>. That said, many are simply great without, and there are also times, at the end of a 15km piste where you have perfectly executed every turn, when a blast of cheapo <b>scooshy cream</b> can elevate an average tart to unforeseen bliss. Think on.</p>
 
-<h2>Serre Chevalier...</h2>
+<h2>Serre Chevalier</h2>
 
 <p class="text-09">Le Chalet de Serre Blanc, 07.03.22</p>
 
@@ -84,3 +111,10 @@ body h2 + .text-09 { margin-top: 1.5em; }
 
 <p>This tarte aux myrtilles is not going to have you singing The Hills are Alive, but come for the view and the long run home to base.</p>
 
+<article class="article-block block" style="background-color: #8CCAC1;">
+    <img class="img-block block" src="./images/les-vigneaux-bg-8CCAC1.jpg" alt="A creamy tartelettte with blueberries on top" />
+    <h2>Puy St. Vincent</h2>
+    <p class="text-09">Petit Moulin, Les Vigneaux, 17.03.22</p>
+    <p>An inverted wonder, sweet cream filling hiding an almond sponge and a layer jam atop a firm pastry base, all topped with fresh blueberries and dusted with sugar. Not your standard arrangement, but then this is not your standard ski station tartelette.</p>
+    <p>The ski station is pretty good, too, if you like the smaller and friendlier places. Many of the pistes are red and blue runs, with plenty of scope for off-piste in the larch forest in good conditions. The top lifts stop on a ridge with a stunning view to the south, a couple of black runs and what looks like access to some back country. Sadly today is not the day to try that - the powder dusting found on this tart is badly needed on the mountain.</p>
+</article>
